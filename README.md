@@ -12,7 +12,7 @@ The goal is to learn. The code that matters (the LoRA layer, the training loop a
 | 2 | LoRA fine-tune on a measurable task, compared with the `peft` library | not started |
 | 3 | Merge LoRA into the weights, then hand-written int8 quantization; size, latency and accuracy vs fp32 | not started |
 | 4 | Results, write-up, lessons | not started |
-| 5 (optional) | Load GPT-2's weights into my own Transformer implementation and match Hugging Face | not started |
+| Optional extra | Load GPT-2's weights into my own Transformer implementation and match Hugging Face (not needed for sessions 1–4) | not started |
 
 - [`GUIDE.md`](GUIDE.md): the overall guide (goals, "done when" tests, rules).
 - [`sessions/`](sessions/): a detailed guide for each session, with reading lists.

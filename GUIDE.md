@@ -1,6 +1,8 @@
 # Guide: LoRA + int8 on GPT-2, in 4 sessions
 
-About 10 hours in total: 4 sessions of about 2.5 hours, plus an optional fifth. Each session ends with something that works and a test that proves it.
+About 10 hours in total: 4 sessions of about 2.5 hours. Each session ends with something that works and a test that proves it.
+
+You don't write a model: GPT-2 is loaded ready-made from Hugging Face. You write what goes on top of it (LoRA, training, merging, quantization).
 
 ## Rules
 
@@ -113,7 +115,9 @@ To predict, compare the model's score for " positive" against " negative" at the
 - **The CV line, with your real numbers:**
   > Implemented LoRA and int8 post-training quantization from scratch in PyTorch on GPT-2; LoRA reached X% on SST-2 (vs Y% zero-shot) training 0.24% of parameters, and int8 cut model size Z× with W points of accuracy change.
 
-## Session 5 (optional): your own Transformer with GPT-2's weights
+## Optional extra, not part of the project: your own Transformer with GPT-2's weights
+
+Sessions 1–4 never require writing a model: they use Hugging Face's GPT-2 as it is. This extra is only for later, if you want to learn GPT-2's internals.
 
 **Goal:** load GPT-2 small's real weights into your own Transformer implementation, and match Hugging Face's logits to within 1e-4.
 
