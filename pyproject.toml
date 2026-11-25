@@ -1,0 +1,35 @@
+[project]
+name = "lora-int8-lab"
+version = "0.1.0"
+description = "Hand-written LoRA and int8 quantization on GPT-2 small"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "datasets>=5.2.0",
+    "torch>=2.15.0",
+    "transformers>=5.24.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lora_int8_lab"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[dependency-groups]
+dev = [
+    "peft>=0.22.0",
+    "pytest>=9.2.0",
+]

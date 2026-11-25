@@ -17,6 +17,25 @@ The goal is to learn. The code that matters (the LoRA layer, the training loop a
 - [`GUIDE.md`](GUIDE.md): the overall guide (goals, "done when" tests, rules).
 - [`sessions/`](sessions/): a detailed guide for each session, with reading lists.
 
+## Setup
+
+Requires [uv](https://docs.astral.sh/uv/). Installs Python 3.12, CPU PyTorch and everything else:
+
+```
+uv sync
+uv run pytest
+```
+
+## Layout
+
+```
+src/lora_int8_lab/   the hand-written code (lora.py, later training, merge, quant)
+tests/               pytest tests for each session's "done when" checks
+scripts/             one entry point per experiment
+results/             tables and plots produced by the scripts
+EXPERIMENTS.md       running log of every run's numbers
+```
+
 ## Results
 
 To be filled in after session 3.

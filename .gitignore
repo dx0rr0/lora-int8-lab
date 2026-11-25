@@ -1,7 +1,9 @@
 .venv/
 __pycache__/
+*.pyc
 .pytest_cache/
+*.egg-info/
+checkpoints/
 *.pt
 *.safetensors
-checkpoints/
-data/
+.ipynb_checkpoints/
